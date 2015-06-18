@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Nombre: MyString
+  Hora: 2015-06-16 20:10:03
+  Sala: 1
+  Oferta: false
+
+two:
+  Nombre: MyString
+  Hora: 2015-06-16 20:10:03
+  Sala: 1
+  Oferta: false

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @estreno.Nombre %>
+</p>
+
+<p>
+  <strong>Hora:</strong>
+  <%= @estreno.Hora %>
+</p>
+
+<p>
+  <strong>Sala:</strong>
+  <%= @estreno.Sala %>
+</p>
+
+<p>
+  <strong>Oferta:</strong>
+  <%= @estreno.Oferta %>
+</p>
+
+<%= link_to 'Editar', edit_estreno_path(@estreno) %> |
+<%= link_to 'Volver', estrenos_path %>

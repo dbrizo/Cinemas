@@ -1,0 +1,31 @@
+<h1><font Color = Green>Estrenos</font></h1>
+<h2><font Color = blue>Disfruta en Familia de todos nuestros Estrenos</font></h2>
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Hora</th>
+      <th>Sala</th>
+      <th>Oferta</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @estrenos.each do |estreno| %>
+      <tr>
+        <td><%= estreno.Nombre %></td>
+        <td><%= estreno.Hora %></td>
+        <td><%= estreno.Sala %></td>
+        <td><%= estreno.Oferta %></td>
+        <td><%= link_to 'Mostrar', estreno %></td>
+        <td><%= link_to 'Editar', edit_estreno_path(estreno) %></td>
+        <td><%= link_to 'Borrar', estreno, method: :delete, data: { confirm: 'Seguro de Borrar?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Agregar Estreno', new_estreno_path %>

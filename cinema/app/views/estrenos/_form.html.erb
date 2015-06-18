@@ -1,0 +1,33 @@
+<%= form_for(@estreno) do |f| %>
+  <% if @estreno.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@estreno.errors.count, "error") %> prohibited this estreno from being saved:</h2>
+
+      <ul>
+      <% @estreno.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Nombre %><br>
+    <%= f.text_field :Nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :Hora %><br>
+    <%= f.time_select :Hora %>
+  </div>
+  <div class="field">
+    <%= f.label :Sala %><br>
+    <%= f.number_field :Sala %>
+  </div>
+  <div class="field">
+    <%= f.label :Oferta %><br>
+    <%= f.check_box :Oferta %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
